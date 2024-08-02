@@ -2,6 +2,7 @@
 import addToUserWishlist from "@/serverActions/addToUserWishlist";
 import getBooks from "@/serverActions/getBooks";
 import React, { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 const BooksCatalogue = () => {
   const [DEMOBooks, setDEMOBooks] = useState([]);
