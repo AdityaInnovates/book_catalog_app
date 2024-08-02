@@ -25,7 +25,6 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <Navbar />
         <ToastContainer
           position="top-left"
           autoClose={1000}
@@ -38,7 +37,10 @@ export default function RootLayout({ children }) {
           // pauseOnHover
           theme="light"
         />
-        <Shield>{children}</Shield>
+        <Shield>
+          <Navbar />
+          {children}
+        </Shield>
       </body>
     </html>
   );
