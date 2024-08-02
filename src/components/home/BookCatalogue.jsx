@@ -27,7 +27,13 @@ const BooksCatalogue = () => {
                 key={el.title + Math.floor(Math.random() * 999)}
                 className="group relative /border-[1px] flex flex-col gap-[0.5rem] border-slate-200 p-[1rem] rounded-lg cursor-pointer"
               >
-                <div className="absolute top-0 right-[1.5rem] mt-[1.35rem]">
+                <div
+                  onClick={async () => {
+                    var addedtowaitlist = await addToUserWishlist(el);
+                    toast.success("Added to your favorites");
+                  }}
+                  className="absolute top-0 right-[1.5rem] mt-[1.35rem]"
+                >
                   <svg
                     aria-hidden="true"
                     data-prefix="fas"
